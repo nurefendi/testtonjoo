@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test tonjoo</title>	
+	<script type="text/javascript" src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>add and remove class Function JQuery</h1>	
+
+	<button class="tombol1" id="tambah">Tambahkan</button>
+	
+	<div class="kotak_dasar">	
+		
+	</div>
+
+</body>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){	
+		//tambah clas
+		$('#tambah').click(function(){
+			$('.kotak_dasar').append('<div class="kotak"> <button class="tombol" id="hapus">Hapus</button> </div>')
+		});	
+		//hapus
+		$('.kotak_dasar').on("click", ".tombol", function() {
+			$(this).parent('.kotak').remove();
+		});	
+
+	});
+</script>
+</html>
